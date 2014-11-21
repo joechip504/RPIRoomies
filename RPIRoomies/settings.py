@@ -96,6 +96,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGIN_REDIRECT_URL = '/'
+SOCIAL_AUTH_FACEBOOK_KEY = '629423573836339'
+SOCIAL_AUTH_FACEBOOK_SECRET = '1850ea3f7da054e33a903e3f5f66b72e'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
