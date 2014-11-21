@@ -1,0 +1,16 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+
+# Django stuff:
+*.log
+*.pot
+*.sqlite3
+
+# VIM files
+*~
+.*.swp
+.*.swo
+.*.un~
+Session.vim
