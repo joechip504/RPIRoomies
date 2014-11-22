@@ -7,14 +7,29 @@
 
 <body>
 <script>
+  var FBIsLoaded = false;
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '629423573836339',
       xfbml      : true,
       version    : 'v2.2'
     });
-  };
+    FBIsLoaded = true;
+    
+    FB.getLoginStatus(function(response) {
+    if (response.authResponse) {
+        // logged in and connected user, someone you know
+        FB.api('/me', {fields: 'last_name'}, function(response) {
+  console.log(response);
+});
 
+    } else {
+        // no user session available, someone you dont know
+        alert("Not logged in");
+    }
+});
+  };
+  
   (function(d, s, id){
      var js, fjs = d.getElementsByTagName(s)[0];
      if (d.getElementById(id)) {return;}
