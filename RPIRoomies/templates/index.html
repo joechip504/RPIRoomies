@@ -1,60 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RPIRoomies">
-    <link rel="shortcut icon" href="/static/ico/favicon.png">
+{% extends 'pagebase.html' %}
 
-    <title>RPI Roomies</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="/static/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="/static/css/main.css" rel="stylesheet">
-    
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-    
-    <script src="/static/js/jquery.min.js"></script>
-    <script src="/static/js/smoothscroll.js"></script>
-    
-
-  </head>
-
-  <body data-spy="scroll" data-offset="0" data-target="#navigation">
-
-    <!-- Fixed navbar -->
-	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
-	      <div class="container">
-	        <div class="navbar-header">
-	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	            <span class="icon-bar"></span>
-	          </button>
-	          <a class="navbar-brand" href="#"><b>RPIRoomies</b></a>
-	        </div>
-	        <div class="navbar-collapse collapse">
-	          <ul class="nav navbar-nav">
-	            <li class="active"><a href="#home" class="smothscroll">Home</a></li>
-	            <li><a href="#desc" class="smothscroll">Description</a></li>
-	            <li><a href="#showcase" class="smothScroll">Showcase</a></li>
-	            <li><a href="#contact" class="smothScroll">Contact</a></li>
-	          </ul>
-	        </div><!--/.nav-collapse -->
-	      </div>
-	    </div>
-
-
+{% block main %}
 	<section id="home" name="home"></section>
 	<div id="headerwrap">
 	    <div class="container">
 	    	<div class="row centered">
 	    		<div class="col-lg-12">
 					<h1>Welcome To <b>RPIRoomies</b></h1>
+					{% if user and not user.is_anonymous %}
+					<h3>Click here to find roommates.</h3>
+					{% else %}
 					<h3>Log in to get started.</h3>
+					{% endif %}
+
 					<br>
 	    		</div>
 	    		
@@ -258,16 +216,6 @@
 		
 		</div>
 	</div>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/static/js/bootstrap.js"></script>
-	<script>
-	$('.carousel').carousel({
-	  interval: 3500
-	})
-	</script>
+{% endblock %}
   </body>
 </html>

@@ -3,9 +3,26 @@
 
 <head>
 <!-- load libraries n stuff here -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RPIRoomies">
+    <link rel="shortcut icon" href="/static/ico/favicon.png">
+
+    <title>RPI Roomies</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/static/css/main.css" rel="stylesheet">
+    
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/smoothscroll.js"></script>
 </head>
 
-<body>
 <script>
   var FBIsLoaded = false;
   window.fbAsyncInit = function() {
@@ -38,8 +55,46 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+  <body data-spy="scroll" data-offset="0" data-target="#navigation">
+
+    <!-- Fixed navbar -->
+	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#"><b>RPIRoomies</b></a>
+	        </div>
+	        <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	            <li class="active"><a href="#home" class="smothscroll">Home</a></li>
+	            <li><a href="#desc" class="smothscroll">Description</a></li>
+	            <li><a href="#showcase" class="smothScroll">Showcase</a></li>
+	            <li><a href="#contact" class="smothScroll">Contact</a></li>
+	               {% if user and not user.is_anonymous %}
+	               <li class="navbar-text">Welcome, {{user.get_full_name}}</li>
+	              <li><button type="button" class="btn btn-danger navbar-btn"
+	            onClick="location.href='{% url 'auth:logout' %}?next={{ request.path }}'">Logout</button></li>
+	               {% else %}
+	            <li><button type="button" class="btn btn-success navbar-btn"
+	            onClick="location.href='{% url 'social:begin' 'facebook' %}?next={{ request.path }}'">Sign in</button></li>
+	            {% endif %}
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </div>
 {% block main %} {% endblock %}
-
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/js/bootstrap.js"></script>
+	<script>
+	$('.carousel').carousel({
+	  interval: 3500
+	})
+	</script>
 </body>
-
 </html>
