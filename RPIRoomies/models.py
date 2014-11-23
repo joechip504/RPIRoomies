@@ -8,3 +8,6 @@ class Person(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     fid = models.CharField(max_length=100)
+
+    # def __eq__(self, other):
+    	# return self.fid == other.fid

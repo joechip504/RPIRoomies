@@ -27,6 +27,8 @@ def find(request):
                 p.first_name != request.user.first_name and
                 p.last_name != request.user.last_name)]
 
+
+
         context['people'] = random.sample(all_people, 5)
 
     return render(request, 'find.html', context)
