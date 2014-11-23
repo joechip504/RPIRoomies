@@ -187,3 +187,7 @@ a:after {
 	color: white
 }
 
+.carousel-inner > .item.active {
+	padding-bottom: 40px;
+}
+
