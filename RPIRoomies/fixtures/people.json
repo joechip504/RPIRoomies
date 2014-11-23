@@ -16,5 +16,59 @@
       "last_name": "Kroemer", 
       "fid" : "687831501"
     }
-  }
+  },
+   {
+    "model": "RPIRoomies.person",
+    "id": 2,
+    "fields": {
+      "first_name": "Lily",
+      "last_name": "Qi", 
+      "fid" : "1330754109"
+    }
+  },
+    {
+    "model": "RPIRoomies.person",
+    "id": 2,
+    "fields": {
+      "first_name": "Ben",
+      "last_name": "Pringle", 
+      "fid" : "790374609"
+    }
+  },
+   {
+    "model": "RPIRoomies.person",
+    "id": 2,
+    "fields": {
+      "first_name": "Jess",
+      "last_name": "Hoffman", 
+      "fid" : "727281910"
+    }
+  },
+     {
+    "model": "RPIRoomies.person",
+    "id": 2,
+    "fields": {
+      "first_name": "Zach",
+      "last_name": "Vanderzee", 
+      "fid" : "1221508572"
+    }
+  },
+   {
+    "model": "RPIRoomies.person",
+    "id": 2,
+    "fields": {
+      "first_name": "Taylor",
+      "last_name": "Abbonizio", 
+      "fid" : "100000130857194"
+    }
+  },
+    {
+    "model": "RPIRoomies.person",
+    "id": 2,
+    "fields": {
+      "first_name": "Nathanial",
+      "last_name": "Newman", 
+      "fid" : "1430465132"
+    }
+  },
 ]
