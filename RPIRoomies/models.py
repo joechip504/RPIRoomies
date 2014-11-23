@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Person(models.Model):
-    fid = models.CharField(max_length=50)
-    user = models.OneToOneField(User)
-    #friends = models.ManyToManyField('self')
-
+    """ Stores first/last name, facebook id """
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    fid = models.CharField(max_length=100)

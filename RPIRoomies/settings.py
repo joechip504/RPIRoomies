@@ -61,6 +61,10 @@ AUTHENTICATION_BACKENDS = (
 
 FACEBOOK_EXTENDED_PERMISSIONS = ['email', 'id']
 
+FIXTURE_DIRS = (
+   '/rpiroomies/fixtures/',
+)
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

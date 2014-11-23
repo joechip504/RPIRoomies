@@ -1,0 +1,20 @@
+[
+  {
+    "model": "RPIRoomies.person",
+    "id": 1,
+    "fields": {
+      "first_name": "Joe",
+      "last_name": "Pringle", 
+      "fid" : "1600658491"
+    }
+  },
+  {
+    "model": "RPIRoomies.person",
+    "id": 2,
+    "fields": {
+      "first_name": "Wyatt",
+      "last_name": "Kroemer", 
+      "fid" : "687831501"
+    }
+  }
+]

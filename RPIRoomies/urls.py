@@ -12,5 +12,6 @@ urlpatterns = patterns('',
     url(r'^$', 'RPIRoomies.views.index'),
     url('', include('social.apps.django_app.urls', namespace='social')),
     url('', include('django.contrib.auth.urls', namespace='auth')),
+    url(r'^find/', 'RPIRoomies.views.find'),
 
 )
