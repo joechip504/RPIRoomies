@@ -200,3 +200,16 @@ a:after {
 	padding-bottom: 40px;
 }
 
+#people {
+	list-style-type: none;
+}
+
+#people > li {
+	display: inline-block;
+	padding-left: 10px;
+}
+
+#people > li > h2 {
+	text-align: center;
+}
+
