@@ -144,6 +144,15 @@ a:after {
 	font-size: 20px;
 }
 
+/* people wrap */
+
+#peoplewrap {
+	border-top: #bdc3c7 solid 5px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+    background-color: #f2f2f2;
+}
+
 /* Showcase Wrap */
 
 #showcase {

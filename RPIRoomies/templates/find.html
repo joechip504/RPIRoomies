@@ -13,9 +13,23 @@
 				{% endif %}
 				<br>
     		</div>
-    		
     </div> <!--/ .container -->
 </div><!--/ #findheaderwrap -->
+
+{% if user and not user.is_anonymous %}
+	<!-- FEATURES WRAP -->
+	<div id="peoplewrap">
+		<div class="container">
+                {% for p in people %}
+                <h2>{{ p.first_name }} {{ p.last_name }}</h2> 
+                <a href="http://facebook.com/profile.php?id={{p.fid}}/" target="_blank">
+	                <img class="img-responsive img-rounded"
+                  src="https://graph.facebook.com/{{ p.fid }}/picture?width=200">
+                {% endfor %}
+            </div>
+        </div>
+{% endif %}
+
 
 {% endblock %}
 
