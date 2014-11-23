@@ -1,1 +1,22 @@
 {% extends 'pagebase.html' %}
+
+{% block main %}
+<div id="findheaderwrap">
+	    <div class="container">
+	    	<div class="row centered">
+	    		<div class="col-lg-12">
+					{% if user and not user.is_anonymous %}
+          <h1>Hi, {{user.first_name}}.</h1> 
+          <h1>Do you know these people?</h1>
+					{% else %}
+					<h1>Sign in to find roommates.</h1>
+					{% endif %}
+
+					<br>
+	    		</div>
+	    		
+	    </div> <!--/ .container -->
+	</div><!--/ #findheaderwrap -->
+
+{% endblock %}
+
