@@ -70,5 +70,50 @@
       "last_name": "Plotka", 
       "fid" : "590752203"
     }
+  },
+ {
+    "model": "RPIRoomies.person",
+    "id": 9,
+    "fields": {
+      "first_name": "Andrew",
+      "last_name": "Aquino", 
+      "fid" : "1636532374"
+    }
+  },
+   {
+    "model": "RPIRoomies.person",
+    "id": 10,
+    "fields": {
+      "first_name": "Rob",
+      "last_name": "Russo", 
+      "fid" : "100000069587597"
+    }
+  },
+     {
+    "model": "RPIRoomies.person",
+    "id": 11,
+    "fields": {
+      "first_name": "Kamil",
+      "last_name": "Szmyd", 
+      "fid" : "100004101548470"
+    }
+  },
+     {
+    "model": "RPIRoomies.person",
+    "id": 12,
+    "fields": {
+      "first_name": "Barry",
+      "last_name": "Chau", 
+      "fid" : "1620830790"
+    }
+  },
+     {
+    "model": "RPIRoomies.person",
+    "id": 13,
+    "fields": {
+      "first_name": "Tristan",
+      "last_name": "Villamil", 
+      "fid" : "100001780541404"
+    }
   }
 ]
